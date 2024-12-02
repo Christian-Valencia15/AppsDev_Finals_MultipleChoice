@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F7F5;
+    background-image: url('./bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#start-page, #exam-page, #result-page {
+    text-align: center;
+    background: #F8F7F5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.instructions-title, .instructions-description {
+    text-align: left;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #033631;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 50%;
+    padding-right: 20px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #033631, #046b4a);
+}
+
+button:disabled {
+    background-color: #cccccc;
+}
+
+button:disabled:hover {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+#questions-container {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    margin-bottom: 10px;
+}
+
+.question hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.answer-message {
+    display: inline-block;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+#controls-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#buttons-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-wrap: nowrap;
+}
+
+#timer {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+}
+
+#status-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #controls-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #status-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #timer, #correct-answers-summary {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #buttons-container {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    button {
+        flex: 1;
+        margin: 5px;
+        width: 100%;
+    }
+
+    #start-page, #exam-page, #result-page {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .instructions-title, .instructions-description {
+        text-align: center;
+    }
+
+    .question {
+        margin-bottom: 15px;
+    }
+
+    .question p {
+        margin-bottom: 5px;
+    }
+
+    .question hr {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    #correct-answers-count, #total-questions-count, #timer {
+        order: 1;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+#exam-page {
+    display: none;
+}
+
+#result-page {
+    display: none;
+}
+
+#correct-answers-summary {
+    margin-top: 0;
+    text-align: right;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    align-items: center;
+}
+
+#correct-answers-summary p {
+    margin: 0;
+}

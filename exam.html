@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Examination</title>
+    <link rel="stylesheet" href="assets/exam.css">
+    <script src="assets/exam.js" defer></script>
+</head>
+<body>
+    <div id="start-page" class="no-center">
+        <h1>AppsDev1 JavaScript Midterm Exam</h1><hr><br>
+        <p class="instructions-title"><strong>Instructions:</strong></p>
+            <p class="instructions-description">Your mission, should you choose to accept it, is to answer all the questions correctly. Click the Start button to embark on this exciting challenge. Best of luck Amigo!</p><br>
+        <button id="start-button">Start</button>
+    </div>
+    <div id="exam-page">
+        <div id="questions-container"></div>
+        <div id="controls-container">
+            <div id="buttons-container">
+                <button id="check-answer-button" disabled>Check Answer</button>
+                <button id="next-button" disabled>Next</button>
+            </div>
+            <div id="timer">Time: 0s</div>
+            <div id="correct-answers-message"></div>
+        </div>
+    </div>
+    <div id="result-page">
+        <h1>Congratulations, you made it Amigo!</h1><hr>
+        <p>You have completed the exam with a total time of <span id="total-time"></span>.</p>
+        <img src="assets/congrats.gif" alt="Congratulations">
+        <button id="start-button" onclick="location.reload()">Restart Quiz</button>
+    </div>
+</body>
+</html>
